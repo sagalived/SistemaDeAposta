@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+  }
+  
+  .btn-cadastro {
+    float: right;
+    margin: 10px;
+  }
+  
+  .btn-deslogar {
+    float: right;
+    margin: 10px;
+  }
+  
+  .table-container {
+    margin-top: 50px;
+  }
+  
+  .btn-apostar {
+    padding: 5px 10px;
+  }
+  
+  .modal-body p {
+    margin-bottom: 10px;
+  }
+  

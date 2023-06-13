@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Jogos</title>
+  <style rel="stylesheet" href="jogos.css">  </style>
+</head>
+
+<body>
+  <h1>Jogos</h1>
+
+  <button class="btn btn-primary btn-cadastro" onclick="window.location.href='cadastro.html'">Cadastro</button>
+
+  <button class="btn btn-danger btn-deslogar" onclick="window.location.href='index.html'">Deslogar</button>
+
+  <!-- Adicione isso no local onde deseja exibir o nome do usuário -->
+  <div id="nomeUsuario"></div>
+
+
+  <div class="table-container">
+    <h2>Jogos Atuais</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Time 1</th>
+          <th>Time 2</th>
+          <th>Horário</th>
+          <th>Local</th>
+          <th>Apostar</th>
+        </tr>
+      </thead>
+      <tbody id="jogosAtuaisTable">
+        <tr>
+          <td>Time A</td>
+          <td>Time B</td>
+          <td>19:00</td>
+          <td>Estádio X</td>
+          <td>
+            <button class="btn btn-primary btn-apostar" data-toggle="modal" data-target="#modalSelecionarCliente"
+              data-time1="Time A" data-time2="Time B" data-horario="19:00" data-local="Estádio X">Apostar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Time C</td>
+          <td>Time D</td>
+          <td>20:30</td>
+          <td>Estádio Y</td>
+          <td>
+            <button class="btn btn-primary btn-apostar" data-toggle="modal" data-target="#modalSelecionarCliente"
+              data-time1="Time C" data-time2="Time D" data-horario="20:30" data-local="Estádio Y">Apostar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container">
+    <h2>Jogos Futuros</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Time 1</th>
+          <th>Time 2</th>
+          <th>Horário</th>
+          <th>Local</th>
+          <th>Apostar</th>
+        </tr>
+      </thead>
+      <tbody id="jogosFuturosTable">
+        <tr>
+          <td>Time E</td>
+          <td>Time F</td>
+          <td>19:00</td>
+          <td>Estádio Z</td>
+          <td>
+            <button class="btn btn-primary btn-apostar" data-toggle="modal" data-target="#modalSelecionarCliente"
+              data-time1="Time E" data-time2="Time F" data-horario="19:00" data-local="Estádio Z">Apostar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Time G</td>
+          <td>Time H</td>
+          <td>20:30</td>
+          <td>Estádio W</td>
+          <td>
+            <button class="btn btn-primary btn-apostar" data-toggle="modal" data-target="#modalSelecionarCliente"
+              data-time1="Time G" data-time2="Time H" data-horario="20:30" data-local="Estádio W">Apostar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Selecionar Cliente -->
+  <div class="modal fade" id="modalSelecionarCliente" tabindex="-1" role="dialog"
+    aria-labelledby="modalSelecionarClienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSelecionarClienteTitle">Selecionar Cliente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="selectCliente">Cliente:</label>
+              <select class="form-control" id="selectCliente">
+                <option value="">Selecione um cliente</option>
+                <option value="Cliente 1">Cliente 1</option>
+                <option value="Cliente 2">Cliente 2</option>
+                <option value="Cliente 3">Cliente 3</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btnSelecionarCliente">Confirmar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Confirmar Aposta -->
+  <div class="modal fade" id="modalConfirmarAposta" tabindex="-1" role="dialog"
+    aria-labelledby="modalConfirmarApostaTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalConfirmarApostaTitle">Confirmar Aposta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modalConfirmarApostaCliente"></p>
+          <p id="modalConfirmarApostaTime1"></p>
+          <p id="modalConfirmarApostaTime2"></p>
+          <p id="modalConfirmarApostaHorario"></p>
+          <p id="modalConfirmarApostaLocal"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btnConfirmarAposta">Confirmar Aposta</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="jogos.js"></script>
+</body>
+
+</html>

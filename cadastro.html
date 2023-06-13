@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Cadastro</title>
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      margin-top: 20px;
+    }
+
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-container th,
+    .table-container td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table-container th {
+      background-color: #f2f2f2;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .open {
+      display: block;
+    }
+
+    .button__container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Cadastro de Clientes</h1>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-primary" id="call__modal">Cadastrar Cliente</button>
+  <button class="btn btn-primary" onclick="window.location.href='jogos.html'">Voltar para JOGOS</button>
+
+
+  <div class="modal" id="modal__modal">
+    <div class="modal-content">
+      <span class="close" id="btn__close">&times;</span>
+      <form id="form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control modal__fields" id="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="text" class="form-control modal__fields" id="telefone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control modal__fields" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro:</label><!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Cadastro</title>
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      margin-top: 20px;
+    }
+
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-container th,
+    .table-container td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table-container th {
+      background-color: #f2f2f2;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .open {
+      display: block;
+    }
+
+    .button__container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Cadastro de Clientes</h1>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-primary" id="call__modal">Cadastrar Cliente</button>
+  <button class="btn btn-primary" onclick="window.location.href='jogos.html'">Voltar para JOGOS</button>
+
+
+  <div class="modal" id="modal__modal">
+    <div class="modal-content">
+      <span class="close" id="btn__close">&times;</span>
+      <form id="form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control modal__fields" id="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="text" class="form-control modal__fields" id="telefone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control modal__fields" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro:</label>
+          <input type="text" class="form-control modal__fields" id="bairro" required>
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" class="form-control modal__fields" id="cidade" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="modalSelecionarCliente">
+    <div class="modal-content">
+      <span class="close" id="btnCloseSelecionarCliente">&times;</span>
+      <h2>Selecione um cliente</h2>
+      <select id="selectCliente" class="form-control">
+        <option value="">Selecione um cliente</option>
+      </select>
+      <button id="btnSelecionarCliente" class="btn btn-primary">Selecionar</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modalConfirmarAposta">
+    <div class="modal-content">
+      <span class="close" id="btnCloseConfirmarAposta">&times;</span>
+      <h2>Confirmar Aposta</h2>
+      <p>Cliente selecionado: <span id="clienteNomeSpan"></span></p>
+      <div>
+        <label for="valorAposta">Valor da Aposta:</label>
+        <input type="text" id="valorAposta" class="form-control">
+      </div>
+      <div>
+        <p>Método de Pagamento:</p>
+        <div>
+          <input type="checkbox" id="cartao" name="pagamento" value="Cartão">
+          <label for="cartao">Cartão</label>
+        </div>
+        <div>
+          <input type="checkbox" id="dinheiro" name="pagamento" value="Dinheiro">
+          <label for="dinheiro">Dinheiro</label>
+        </div>
+        <div>
+          <input type="checkbox" id="credito" name="pagamento" value="Crédito">
+          <label for="credito">Crédito</label>
+        </div>
+      </div>
+      <button id="btnConfirmarApostaFinal" class="btn btn-primary">Confirmar</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="cadastro.js"></script>
+  <script>
+    // Dados dos clientes
+    var clientes = [
+      { id: 1, nome: "Cliente 1" },
+      { id: 2, nome: "Cliente 2" },
+      { id: 3, nome: "Cliente 3" },
+      { id: 4, nome: "Cliente 4" },
+    ];
+
+    // Função para preencher o select de clientes
+    function preencherSelectClientes() {
+      var selectCliente = document.getElementById("selectCliente");
+      selectCliente.innerHTML = "<option value=''>Selecione um cliente</option>";
+      for (var i = 0; i < clientes.length; i++) {
+        var option = document.createElement("option");
+        option.value = clientes[i].id;
+        option.text = clientes[i].nome;
+        selectCliente.appendChild(option);
+      }
+    }
+
+    // Abrir o modal de selecionar cliente
+    document.getElementById("call__modal").addEventListener("click", function () {
+      preencherSelectClientes();
+      var modalSelecionarCliente = document.getElementById("modalSelecionarCliente");
+      modalSelecionarCliente.style.display = "block";
+    });
+
+    // Fechar o modal de selecionar cliente
+    document.getElementById("btnCloseSelecionarCliente").addEventListener("click", function () {
+      var modalSelecionarCliente = document.getElementById("modalSelecionarCliente");
+      modalSelecionarCliente.style.display = "none";
+    });
+
+    // Selecionar cliente e abrir modal de confirmar aposta
+    document.getElementById("btnSelecionarCliente").addEventListener("click", function () {
+      var selectCliente = document.getElementById("selectCliente");
+      var clienteId = selectCliente.value;
+      var clienteNome = selectCliente.options[selectCliente.selectedIndex].text;
+
+      if (clienteId !== "") {
+        var clienteNomeSpan = document.getElementById("clienteNomeSpan");
+        clienteNomeSpan.textContent = clienteNome;
+
+        var modalSelecionarCliente = document.getElementById("modalSelecionarCliente");
+        modalSelecionarCliente.style.display = "none";
+
+        var modalConfirmarAposta = document.getElementById("modalConfirmarAposta");
+        modalConfirmarAposta.style.display = "block";
+      }
+    });
+
+    // Fechar o modal de confirmar aposta
+    document.getElementById("btnCloseConfirmarAposta").addEventListener("click", function () {
+      var modalConfirmarAposta = document.getElementById("modalConfirmarAposta");
+      modalConfirmarAposta.style.display = "none";
+    });
+
+    // Capturar o valor da aposta e o método de pagamento
+    document.getElementById("btnConfirmarApostaFinal").addEventListener("click", function () {
+      var valorAposta = document.getElementById("valorAposta").value;
+      var checkboxCartao = document.getElementById("cartao");
+      var checkboxDinheiro = document.getElementById("dinheiro");
+      var checkboxCredito = document.getElementById("credito");
+
+      if (valorAposta !== "" && (checkboxCartao.checked || checkboxDinheiro.checked || checkboxCredito.checked)) {
+        var modalConfirmarAposta = document.getElementById("modalConfirmarAposta");
+        modalConfirmarAposta.style.display = "none";
+
+        // Realizar as ações necessárias com os dados da aposta (enviar para o backend, etc.)
+        console.log("Cliente selecionado: ", document.getElementById("clienteNomeSpan").textContent);
+        console.log("Valor da Aposta: ", valorAposta);
+
+        var metodoPagamento = "";
+        if (checkboxCartao.checked) {
+          metodoPagamento += "Cartão ";
+        }
+        if (checkboxDinheiro.checked) {
+          metodoPagamento += "Dinheiro ";
+        }
+        if (checkboxCredito.checked) {
+          metodoPagamento += "Crédito";
+        }
+        console.log("Método de Pagamento: ", metodoPagamento);
+      }
+    });
+  </script>
+</body>
+
+</html>
+
+          <input type="text" class="form-control modal__fields" id="bairro" required>
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" class="form-control modal__fields" id="cidade" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="cadastro.js"></script>
+    
+</body>
+
+</html>
